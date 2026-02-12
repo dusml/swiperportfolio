@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swiper portfolio</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/basic.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <h1>
+        <a href="#">
+          <span>SoYeon's</span>Portfolio
+        </a>
+      </h1>
+      <div class="menu_btn">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu_bg">
+        <div class="menu_bg_inner">
+          <nav>
+            <ul>
+              <li><a href="#"><span>HOME</span></a></li>
+              <li><a href="#">Responsiv<br><span>HotelLago</span> </a></li>
+              <li><a href="#">Responsiv<br><span>Gallery Filtering</span></a></li>
+              <li><a href="#">PC Web site Renewal<br><span>서브웨이</span></a></li>
+              <li><a href="#">PC Web site Renewal<br><span>오늘의 집</span></a></li>
+              <li><a href="#">Mobile Web site Renewal<br><span>아산병원</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide section1">
+        <div class="bg">
+          <video src="media/1.mp4" autoplay muted loop></video>
+        </div>
+        <div class="bg_opacity"></div>
+        <div class="intro">
+          <span class="cate">NEW WEB <strong>Developer</strong></span>
+          <p class="title">
+            창의적이고 성실한 개발자 박소연 입니다.
+          </p>
+          <p class="desc">
+            ★★★★★★
+          </p>
+        </div>
+      </div>
+
+      <div class="swiper-slide section2">
+        <div class="bg"></div>
+        <div class="bg_opacity"></div>
+        <div class="intro right">
+          <span class="cate">Responsiv 사이트</span>
+          <p class="title">Hotel Lago</p>
+          <p class="desc">HTML5 / CSS3 / 기획 100% · 디자인 100% · 퍼블리싱 100%</p>
+          <div class="btn_wrap">
+            <a href="https://dusml.github.io/HotelLago/" target="_blank">
+              <span>사이트 바로가기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide section3">
+        <div class="bg">
+          <video src="media/2.mp4" autoplay muted loop></video>
+        </div>
+        <div class="bg_opacity"></div>
+        <div class="intro right">
+          <span class="cate">Responsiv 사이트</span>
+          <p class="title">Filtering Gallery Site</p>
+          <p class="desc">
+            HTML5 / CSS3 / Javascript / filtering 스크립트 <br>기획 100% · 디자인 100% · 퍼블리싱 100%
+          </p>
+          <div class="btn_wrap">
+            <a href="https://dusml.github.io/filtering/" target="_blank">
+              <span>사이트 바로가기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide section4">
+        <div class="bg"></div>
+        <div class="bg_opacity"></div>
+        <div class="intro">
+          <span class="cate">PC Web site Renewal</span>
+          <p class="title">subway</p>
+          <p class="desc">
+            HTML5 / CSS3 / Javascript / flitering 스크립트 <br>기획 100% · 디자인 100% · 퍼블리싱 100%
+          </p>
+          <div class="btn_wrap">
+            <a href="https://dusml.github.io/subway/" target="_blank">
+              <span>사이트 바로가기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide section5">
+        <div class="bg"></div>
+        <div class="bg_opacity"></div>
+        <div class="intro">
+          <span class="cate">PC Web site Renewal</span>
+          <p class="title">오늘의 집</p>
+          <p class="desc">
+            HTML5 / CSS3 / Javascript / flitering 스크립트 <br>기획 100% · 디자인 100% · 퍼블리싱 100%
+          </p>
+          <div class="btn_wrap">
+            <a href="https://dusml.github.io/todayHouse/" target="_blank">
+              <span>사이트 바로가기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide section6">
+        <div class="bg"></div>
+        <div class="bg_opacity"></div>
+        <div class="intro">
+          <span class="cate">Mobile Web site Renewal</span>
+          <p class="title">아산병원</p>
+          <p class="desc">
+            HTML5 / CSS3 / Javascript / flitering 스크립트 <br>기획 100% · 디자인 100% · 퍼블리싱 100%
+          </p>
+          <div class="btn_wrap">
+            <a href="#">
+              <span>사이트 바로가기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="page_control">
+      <div class="prevBtn">prev</div>
+      <div class="nextBtn">next</div>
+      <i></i>
+    </div>
+  </div>
+</body>
+</html>

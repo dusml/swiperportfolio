@@ -1,0 +1,401 @@
+@charset "utf-8";
+/* header */
+/* header{}
+.header{} */
+header h1{
+  position: fixed;
+  top: 40px;
+  left: 50px;
+  z-index: 20;
+}
+header h1 a{
+  color: #fff;
+  text-shadow:  0 0 5px rgba(0, 0, 0, 0.8);
+}
+header h1 a span{
+  display: block;
+  text-align: center;
+}
+
+.menu_btn{
+  /* border: 1px solid black; */
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 40px;
+  right: 50px;
+  z-index: 20;
+}
+.menu_btn span{
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  margin: 5px 0;
+}
+/* .menu_btn span:nth-child(1){} */
+.menu_btn span:nth-child(2){
+  width: 20px;
+  float: right;
+  position: relative;
+  transition: 0.5s ease-in;
+}
+.menu_btn span:nth-child(2)::after{
+  content: 'MENU';
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  font-size: 12px;
+  opacity: 0;
+  transition: 0.5s ease-in;
+  color: #fff;
+}
+.menu_btn:hover span:nth-child(2)::after{
+  opacity: 1;
+}
+.menu_btn:hover span:nth-child(2){
+  width: 40px;
+}
+
+.menu_btn.open span{
+  position: absolute;
+  width: 40px;
+  transition: 0.2s ease-in;
+}
+
+.menu_btn.open span:nth-child(1){
+  transform: rotate(45deg);
+}
+.menu_btn.open span:nth-child(2){
+  transform: rotate(-45deg);
+}
+
+.menu_btn.open span:nth-child(2)::after{
+  display: none;
+}
+
+
+.menu_bg{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 19;
+}
+.menu_bg_inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav{
+  /* border: 2px solid rgb(7, 71, 28); */
+}
+nav ul{}
+nav li{
+  padding: 20px 0;
+}
+nav a{
+  font-size: 16px;
+  color: #b8b8b8;
+  transition: 0.2s ease-in;
+}
+nav a span{
+  font-size: 30px;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  margin-top: 10px;
+  text-indent: 10px;
+}
+nav a span::after{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #fff;
+  bottom: -10px;
+  left: 0;
+  transition: 300ms ease-in;
+}
+nav a:hover span::after{
+  width: 100%;
+}
+nav a:hover{
+  opacity: 1;
+}
+.menu_btn.open + .menu_bg{
+  left: 0;
+  transition: 0.3s ease-in;
+}
+
+
+
+/* swiper 슬라이더 부분 */
+.swiper{
+  height: 100vh;
+}
+.swiper-wrapper{}
+.swiper-slide{
+  overflow: hidden;
+  position: relative;
+}
+
+.bg{
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 300ms ease-in, transform 600ms ease-in;
+  transform: scale(1.1) rotate(2deg);
+}
+
+.swiper-slide-active .bg{
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+
+.bg video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.bg_opacity{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:radial-gradient(rgba(0, 0, 0, 0) 17%, rgba(0,0,0,0.8) 100%);
+  opacity: 1;
+  transition: 0.6s ease-in;
+}
+.swiper-slide-active .bg_opacity{
+  opacity: 0.3;
+}
+
+
+.section1{}
+.section2{}
+.section3{
+  background: #0398AD;
+}
+.section4{
+  background: #0E0D10;
+}
+.section5{}
+.section6{
+  background: #1F240A;
+}
+
+
+.section2 .bg{
+  background: url('../media/01.jpg') no-repeat center center / cover;
+}
+.section4 .bg{
+  background: url('../media/02.jpg') no-repeat center center / cover;
+}
+.section5 .bg{
+  background: url('../media/04.jpg') no-repeat center center / cover;
+}
+.section6 .bg{
+  background: url('../media/03.jpg') no-repeat center center / cover;
+}
+
+.intro{
+  /* border: 2px solid rgb(255, 0, 0); */
+  position: absolute;
+  z-index: 9;
+  top: 30vh;
+  width: 900px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+}
+.intro.right{
+  text-align: right;
+}
+@media (max-width:920px) {
+  .intro{
+    width: 95%;
+  }
+}
+
+.section1 .intro{
+  width: 700px;
+}
+.intro .cate{
+  font-size: 18px;
+  transform: translate(0, -50px);
+  display: inline-block;/*인라인 요소여서 적용이 안됨*/
+  opacity: 0;
+  transition: .6s ease-in;
+}
+/* .intro .cate strong{} */
+.title{
+  font-size: 50px;
+  font-weight: bold;
+  padding: 30px 0;
+  transform: translate(150px, 0);
+  transition: .6s 0.4s ease-in;
+  opacity: 0;
+}
+
+.intro.right .title{
+  transform: translate(-150px, 0);
+  opacity: 0;
+}
+.desc{
+  font-size: 18px;
+  line-height: 1.7;
+  padding-bottom: 20px;
+  opacity: 0;
+  transition: .6s 0.6s ease-in;
+}
+
+.swiper-slide-active .cate{
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.swiper-slide-active .title{
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.swiper-slide-active .right .title{
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.swiper-slide-active .desc{
+  opacity: 1;
+}
+
+.swiper-slide-active .btn_wrap{
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+
+.btn_wrap{
+  transform: translate(0, 50px);
+  opacity: 0;
+  transition: .4s 0.8s ease-in;
+}
+.btn_wrap a{
+  display: inline-block;
+  padding: 20px 10px;
+  position: relative;
+}
+.btn_wrap a::before,
+.btn_wrap a::after
+{
+  /* display: block; */
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  
+}
+
+
+.btn_wrap a::before{
+  right: 0;
+  width: 100%;
+  background: #fff;
+  transition: width 0.3s 0.3s ease-in;
+}
+.btn_wrap a::after{
+  left: 0;
+  background: rgb(14, 255, 235);
+  width: 0;
+  transition: width 0.3s ease-in;
+}
+
+
+
+.btn_wrap a:hover::before{
+  width: 0%;
+  transition-delay: 0ms;
+}
+.btn_wrap a:hover::after{
+  width: 100%;
+  transition-delay: 300ms;
+}
+
+.page_control{
+  /* border: 2px solid salmon; */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.page_control > div{
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+}
+
+.page_control i{
+  display: inline-block;
+  width: 80px;
+  height: 2px;
+  /* vertical-align: middle; */
+  position: relative;
+  background: rosybrown;
+  order: 1;
+}
+
+.page_control i::before,
+.page_control i::after
+{
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 2px;
+  right: 0;
+}
+
+.page_control i::before{
+  background: #fff;
+  transition: 200ms ease-in;
+}
+.page_control i::after{
+  background: rosybrown;
+  width: 0;
+  transition: 200ms ease-in;
+}
+
+
+.nextBtn{
+  order: 2;
+}
+.prevBtn:hover{
+  color: rosybrown;
+}
+.prevBtn:hover ~ i::before{
+  width: 0;
+}
+.nextBtn:hover ~ i::after{
+  width: 80px;
+}
+.nextBtn:hover {
+  color: rosybrown;
+}
+
+.swiper-pagination {
+  color: #fff;
+}
+
+.swiper-pagination-total{
+  opacity: 0.6;
+}
+
